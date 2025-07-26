@@ -1,0 +1,10 @@
+.ItemBoard{
+    display: flex;
+    justify-content: center;
+}
+.BoardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
