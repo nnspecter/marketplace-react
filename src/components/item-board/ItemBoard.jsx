@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Item from '../item/Item'
 import "./ItemBoard.css"
 import useFetch from '../customHooks/useFetch';
+import { CartContext, CartContextProvider } from '../customHooks/Cart/CartContext';
 const ItemBoard = () => {
   const[itemsData, setItemsData] = useState({products: []});
 
@@ -23,9 +24,9 @@ const ItemBoard = () => {
             rating={item.rating}
             price={item.price}
           />
-        ))
+            ) 
+          )
         }
-        
       </div>
     </div>
   )

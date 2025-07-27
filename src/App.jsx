@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/header/Header';
 import ItemBoard from './components/item-board/ItemBoard';
 import { CartContextProvider } from './components/customHooks/Cart/CartContext';
+import Cart from './components/customHooks/Cart/Cart';
 
 function App() {
   const [cart, setCartItems] = useState([]);
@@ -19,7 +20,9 @@ function App() {
     <br></br>
     <CartContextProvider>
       <ItemBoard/>
+      <Cart/>
     </CartContextProvider>
+    
     </div>
   )
 }

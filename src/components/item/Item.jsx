@@ -1,9 +1,27 @@
-import React, { useId } from 'react';
+import React, { useContext, useId } from 'react';
 import "./item.css";
 import star from "../../assets/star.png";
 import monitor from "../../assets/monitor.jpg"
 import basket from "../../assets/basket.png"
-const Item = ({key, id, image, title, rating, price}) => {
+import { CartContext } from '../customHooks/Cart/CartContext';
+
+
+const Item = ({ id, image, title, rating, price}) => {
+  
+  const newItem={
+    id: id,
+    image: image,
+    title: title,
+    rating: rating,
+    price: price
+  }
+
+  const{updateItems} = useContext(CartContext);
+
+  const handleClick = () =>{
+    updateItems(newItem)
+  }
+
   return (
     <div className='item' id={`item-${id}`}>
         <img src={image}></img>
@@ -16,7 +34,7 @@ const Item = ({key, id, image, title, rating, price}) => {
             </div>
         <div className='item-line2'>
             <h2>{price}$</h2>
-            <button>
+            <button onClick = {handleClick}>
                 +
                 <img src={basket}/>
             </button>

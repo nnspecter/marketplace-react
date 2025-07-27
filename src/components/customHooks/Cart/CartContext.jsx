@@ -2,10 +2,10 @@ import React, { createContext, useState } from 'react'
 export const CartContext = createContext();
 
 export const CartContextProvider = ({children}) => {
-    const[item, setNewItems] = useState([]);
+    const[item, setItems] = useState([]);
 
-    const updateItems = (item) => {
-        setNewItems([...item, setNewItems]);
+    const updateItems = (newItem) => {
+        setItems(prev =>[...prev, newItem]);
     }
 
   return (
