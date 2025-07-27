@@ -3,10 +3,9 @@ import "./item.css";
 import star from "../../assets/star.png";
 import monitor from "../../assets/monitor.jpg"
 import basket from "../../assets/basket.png"
-const Item = ({key, title, rating, price, image}) => {
-  const id = useId();
+const Item = ({key, id, image, title, rating, price}) => {
   return (
-    <div className='item' id={key}>
+    <div className='item' id={`item-${id}`}>
         <img src={image}></img>
         <h3 className='item-name' >{title}</h3>
         <div className='item-line1'>
