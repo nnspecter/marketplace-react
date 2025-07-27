@@ -5,9 +5,13 @@ const Cart = () => {
   const {item} = useContext(CartContext);
 
   return (
-    <div>{item.map((e)=>{
-      return <li>{e.title}</li>
-    })}</div>
+
+    <div>
+        <h1>Корзина</h1>
+        {item.map((e)=>{
+        return <h3>{e.title}</h3>
+        })}
+    </div>
   )
 }
 
