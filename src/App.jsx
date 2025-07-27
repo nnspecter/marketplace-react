@@ -20,7 +20,6 @@ function App() {
     <CartContextProvider>
       <ItemBoard/>
     </CartContextProvider>
-    
     </div>
   )
 }
