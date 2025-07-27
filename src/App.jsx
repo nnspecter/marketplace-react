@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import ItemBoard from './components/item-board/ItemBoard';
-import { CartContextProvider } from './components/customHooks/Cart/CartContext';
-import Cart from './components/customHooks/Cart/Cart';
+import { CartContextProvider } from './components/Cart/CartContext';
+import Cart from './components/Cart/Cart';
 
 function App() {
   const[section, setSection]=useState('Каталог');

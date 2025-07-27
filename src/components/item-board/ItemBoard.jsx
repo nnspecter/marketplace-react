@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Item from '../item/Item'
 import "./ItemBoard.css"
 import useFetch from '../customHooks/useFetch';
-import { CartContext, CartContextProvider } from '../customHooks/Cart/CartContext';
+import { CartContext, CartContextProvider } from '../Cart/CartContext';
 const ItemBoard = () => {
   const[itemsData, setItemsData] = useState({products: []});
 

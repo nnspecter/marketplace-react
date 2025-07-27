@@ -3,7 +3,7 @@ import "./item.css";
 import star from "../../assets/star.png";
 import monitor from "../../assets/monitor.jpg"
 import basket from "../../assets/basket.png"
-import { CartContext } from '../customHooks/Cart/CartContext';
+import { CartContext } from '../Cart/CartContext';
 
 
 const Item = ({ id, image, title, rating, price}) => {
