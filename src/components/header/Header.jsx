@@ -5,14 +5,14 @@ import profile from "../../assets/profile.png";
 import search_ico from "../../assets/search.png";
 import './Header.css';
 
-const Header = () => {
+const Header = ({section, updateSection}) => {
   return (
     <div className='header1'>
         <div className='bl1'>
             <img src={logo} alt ="Логотип"/>
-            <p>О нас</p>
-            <p>Каталог</p>
-            <p>Подарочные карты</p>
+            <button onClick={()=>updateSection("О нас")}>О нас</button>
+            <button onClick={()=>updateSection("Каталог")}>Каталог</button>
+            <button onClick={()=>updateSection("Подарочные карты")}>Подарочные карты</button>
         </div>
         <div className='bl2'>
             <div className='bl2-ico'>
@@ -20,7 +20,7 @@ const Header = () => {
                 <img src={search_ico} alt ="Логотип"/>
             </div>
             <div className='bl2-ico'>
-            <p>Корзина</p>
+            <button onClick={()=>updateSection("Корзина")}>Корзина</button>
             <img src={basket} alt ="Логотип"/>
             </div>
             
