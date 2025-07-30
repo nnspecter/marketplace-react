@@ -9,6 +9,11 @@
 .about-text{
  max-width: 500px;
  width: 100%;
+
+}
+
+.about-text > p{
+    font-size: 20pt;
 }
 
 .about-img{

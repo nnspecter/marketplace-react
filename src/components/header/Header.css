@@ -8,6 +8,9 @@
     border-radius: 16px;
     box-shadow: 0px 10px 14px -12px rgba(34, 60, 80, 0.6);
 }
+.header1 > .bl2 img{
+    max-width: 48px;
+}
 
 .header1 > .bl1{
     display: flex;
@@ -20,6 +23,21 @@
 .header1 > .bl1 > img{
     max-width: 50px;
 }
+
+.header1 > .bl1 > button,
+.header1 > .bl2 > .bl2-ico > button{
+    font-size: 18pt;
+    font-weight: lighter;
+    border: none;
+    outline: none;
+}
+
+.header1 > .bl1 > button:hover,
+.header1 > .bl2 > .bl2-ico > button:hover{
+    text-decoration: underline;
+}
+
+
 
 .header1 > .bl2{
     display: flex;
@@ -35,7 +53,8 @@
     gap: 2px;
 }
 
-.header1 > .bl2 > .bl2-ico > img{
-    max-width: 20px;
+.header1 > .bl2 > .bl2-ico > button img{
+    max-width: 28px;
 }
+
 

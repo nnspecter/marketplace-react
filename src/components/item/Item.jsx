@@ -4,16 +4,19 @@ import star from "../../assets/star.png";
 import monitor from "../../assets/monitor.jpg"
 import basket from "../../assets/basket.png"
 import { CartContext } from '../Cart/CartContext';
+import { use } from 'react';
 
 
 const Item = ({ id, image, title, rating, price}) => {
-  
+  const key = useId();
   const newItem={
+    key: key,
     id: id,
     image: image,
     title: title,
     rating: rating,
-    price: price
+    price: price,
+    count: 1,
   }
 
   const{updateItems} = useContext(CartContext);

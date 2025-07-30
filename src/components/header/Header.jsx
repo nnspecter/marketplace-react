@@ -16,15 +16,17 @@ const Header = ({section, updateSection}) => {
         </div>
         <div className='bl2'>
             <div className='bl2-ico'>
-                <p>Поиск</p>
-                <img src={search_ico} alt ="Логотип"/>
+                <button>
+                  <img src={search_ico} alt ="Логотип"/>
+                </button>
             </div>
             <div className='bl2-ico'>
-            <button onClick={()=>updateSection("Корзина")}>Корзина</button>
-            <img src={basket} alt ="Логотип"/>
+            <button onClick={()=>updateSection("Корзина")}>
+              <img src={basket} alt ="Логотип"/>
+            </button>
             </div>
             
-            <img src={profile} style={{maxWidth: 40}} alt ="Логотип"/>
+            <img src={profile} alt ="Логотип"/>
             
         </div>
     </div>
