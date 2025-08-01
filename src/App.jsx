@@ -6,6 +6,8 @@ import { CartContextProvider } from './components/Cart/CartContext';
 import Cart from './components/Cart/Cart';
 import About from './components/about/About';
 import { AnimatePresence, motion } from 'framer-motion';
+import { SortContextProvider } from './components/item-board/SortContext';
+import ItemsSort from './components/item-board/ItemsSort';
 
 function App() {
   const[section, setSection]=useState('О нас');
@@ -32,7 +34,10 @@ function App() {
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 exit={{opacity:0}}>
-                <ItemBoard/>
+                <SortContextProvider>
+                  <ItemsSort/>
+                  <ItemBoard/>
+                </SortContextProvider>
               </motion.div>)}
 
             {section=="О нас" && (

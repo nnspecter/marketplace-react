@@ -28,6 +28,7 @@
     background-color: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .cart-item > .imgName > .operate > button > img{
@@ -48,6 +49,8 @@
 
 
 .cart-item > .imgName > .operate > .cart-count > button{
+    display: inline-block;
+    cursor: pointer;
     padding: 5% 40% 20% 45%;
     border-radius: 8px;
     outline: none;
