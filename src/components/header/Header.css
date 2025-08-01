@@ -1,5 +1,9 @@
 .header1{
     display: flex;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background: white;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +34,7 @@
     font-weight: lighter;
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .header1 > .bl1 > button:hover,

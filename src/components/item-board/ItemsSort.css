@@ -1,0 +1,13 @@
+.sort-panel{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    max-width: 100vh;
+    padding: 50px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+
+.sort-panel > .sort-left{
+
+}

@@ -1,5 +1,5 @@
 import React, { useContext, useId } from 'react';
-import "./item.css";
+import "./itemCard.css";
 import star from "../../assets/star.png";
 import monitor from "../../assets/monitor.jpg"
 import basket from "../../assets/basket.png"
@@ -7,7 +7,7 @@ import { CartContext } from '../Cart/CartContext';
 import { use } from 'react';
 
 
-const Item = ({ id, image, title, rating, price}) => {
+const ItemCard = ({ id, image, title, rating, price, reviews}) => {
   const key = useId();
   const newItem={
     key: key,
@@ -28,12 +28,14 @@ const Item = ({ id, image, title, rating, price}) => {
   return (
     <div className='item' id={`item-${id}`}>
         <img src={image}></img>
-        <h3 className='item-name' >{title}</h3>
+        <div className='item-name'>
+          <h3>{title}</h3>
+        </div>
         <div className='item-line1'>
             <div className='star'><p>{rating}</p>
                 <img src={star}/>
             </div>
-            <p>29 000 reviews</p>
+            <p>{reviews} reviews</p>
             </div>
         <div className='item-line2'>
             <h2>{price}$</h2>
@@ -46,4 +48,4 @@ const Item = ({ id, image, title, rating, price}) => {
   )
 }
 
-export default Item
+export default ItemCard

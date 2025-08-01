@@ -8,7 +8,7 @@ import About from './components/about/About';
 import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
-  const[section, setSection]=useState('Каталог');
+  const[section, setSection]=useState('О нас');
 
   const updateSection = (newSection) =>{
     setSection(newSection);

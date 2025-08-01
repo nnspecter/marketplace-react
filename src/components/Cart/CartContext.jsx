@@ -13,8 +13,15 @@ export const CartContextProvider = ({children}) => {
         }
       setItems(prev =>[...prev, newItem]);
     }
+   const handleClickDelete =(id) =>{
+    setItems(prevItems=>{
+      const index = prevItems.findIndex(el => el.id === id)
+      if(index === -1){return prevItems;};
+      return prevItems.filter(el => el.id !== id);
+    })
+   }
 
-   const handleClick = (increment, id) => {
+   const handleClickCount = (increment, id) => {
     setItems(prevItems => {
       const index = prevItems.findIndex(el => el.id === id);
       if(index === -1){return prevItems;};
@@ -22,9 +29,10 @@ export const CartContextProvider = ({children}) => {
       const updatedItems = [...prevItems];
       const newCount = increment ? updatedItems[index].count + 1 : updatedItems[index].count - 1;
       
-      if(newCount <= 0){
-        return prevItems.filter(el=> el.id !==id);
+      if(newCount <= 0 || newCount >9){
+        return prevItems;
       }
+
       updatedItems[index] = {...updatedItems[index], count: newCount};
       return updatedItems;
     })
@@ -33,7 +41,7 @@ export const CartContextProvider = ({children}) => {
    
 
   return (
-    <CartContext.Provider value = {{item, updateItems, handleClick}}>
+    <CartContext.Provider value = {{item, updateItems, handleClickCount, handleClickDelete}}>
         {children}
     </CartContext.Provider>
   )
