@@ -8,7 +8,7 @@ export const CartContextProvider = ({children}) => {
       const index = item.findIndex(el => el.id === newItem.id);
 
       if(index !=-1){
-        item[index].count++;
+        if(item[index].count < 9) {item[index].count++;}
         return;
         }
       setItems(prev =>[...prev, newItem]);
