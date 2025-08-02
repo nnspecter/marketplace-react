@@ -26,7 +26,7 @@ const ItemsSort = () => {
               name="sort"
               onChange={(e)=>updateSort(e.target.value)}
             >
-            <option value="all">Актуальности</option>
+            <option value="default">Актуальности</option>
             <option value="upPrice">Возрастанию цены</option>
             <option value="dwPrice">Убыванию цены</option>
             <option value="rate">Оценкам</option>
