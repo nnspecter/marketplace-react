@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./ItemsSort.css"
 import { SortContext } from './sortContext'
 
@@ -29,7 +29,7 @@ const ItemsSort = () => {
             <option value="default">Актуальности</option>
             <option value="upPrice">Возрастанию цены</option>
             <option value="dwPrice">Убыванию цены</option>
-            <option value="rate">Оценкам</option>
+            <option value="rating">Оценкам</option>
           </select>
         </div>
     </div>

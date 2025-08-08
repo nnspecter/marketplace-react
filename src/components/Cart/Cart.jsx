@@ -9,9 +9,9 @@ const Cart = () => {
 
 
   return (
-    <div>
+    <div className='cart'>
         <h1>Корзина:</h1>
-        {Object.keys(item).length == 0 && <h2>Ваша корзина пуста, пожалуйста просмотрите наш каталог.</h2>}
+        {Object.keys(item).length == 0 && <p>Ваша корзина пуста, пожалуйста просмотрите наш каталог.</p>}
         {item.map((e)=>{
         return (
           <div className='cart-item' key={e.key}>

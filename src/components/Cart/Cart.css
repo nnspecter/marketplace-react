@@ -1,3 +1,7 @@
+.cart > p{
+    font-size: 16pt;
+}
+
 .cart-item{
     display: flex;
     align-content: center;
