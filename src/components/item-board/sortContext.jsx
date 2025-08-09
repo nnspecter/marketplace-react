@@ -11,7 +11,7 @@ export const SortContextProvider = ({children}) => {
     useEffect(()=>{
         if (!error){
             setItems({...data});
-            updateSort(sort)
+            updateSort(sort);
         }
     }, [data])
     
