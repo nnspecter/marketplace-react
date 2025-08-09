@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Children, useState } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import ItemBoard from './components/item-board/ItemBoard';
@@ -8,6 +8,7 @@ import About from './components/about/About';
 import { AnimatePresence, motion } from 'framer-motion';
 import { SortContextProvider } from './components/item-board/SortContext';
 import ItemsSort from './components/item-board/ItemsSort';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 function App() {
   const[section, setSection]=useState('О нас');
@@ -19,49 +20,56 @@ function App() {
   
   return (
     <div className='App'>
-      <Header 
-        section={section}
-        updateSection={updateSection}
-      />
-      <br></br>
-      <div className='main'>
-        <CartContextProvider>
-          <AnimatePresence mode="wait">
+      <Router>
+        <Header/>
+        <br></br>
 
-            {section=="Каталог" && (
-              <motion.div
-                key="catalog"
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                exit={{opacity:0}}>
-                <SortContextProvider>
-                  <ItemsSort/>
-                  <ItemBoard/>
-                </SortContextProvider>
-              </motion.div>)}
 
-            {section=="О нас" && (
-              <motion.div
-                key="about"
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                exit={{opacity:0}}>
+        <div className='main'>
+          <CartContextProvider>
+            <AnimatePresence mode="wait">
+
+              {/* Каталог */}
+              <RouteWrapper path="/catalog">
+                  <SortContextProvider>
+                    <ItemsSort/>
+                    <ItemBoard/>
+                  </SortContextProvider>
+              </RouteWrapper>
+
+              {/*О нас*/ }
+              <RouteWrapper path="/about">
                 <About/>
-              </motion.div>)}
+              </RouteWrapper>
 
-            {section=="Корзина" && (
-              <motion.div
-                key="cart"
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                exit={{opacity:0}}>
+              <RouteWrapper path="/cart">
                 <Cart/>
-              </motion.div>)}
+              </RouteWrapper>
 
-          </AnimatePresence>
-        </CartContextProvider>
-      </div>
+            </AnimatePresence>
+          </CartContextProvider>
+        </div>
+      </Router>
     </div>
+  )
+}
+
+const RouteWrapper = ({path, children}) => {
+  return(
+    <Routes>
+      <Route
+        path={path}
+        element={
+          <motion.div
+            key={path}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}>
+            {children}
+          </motion.div>
+        }
+      />
+    </Routes>
   )
 }
 

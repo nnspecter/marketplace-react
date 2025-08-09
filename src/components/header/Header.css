@@ -28,20 +28,26 @@
     max-width: 50px;
 }
 
-.header1 > .bl1 > button,
+.header1 > .bl1 > p > a,
 .header1 > .bl2 > .bl2-ico > button{
     font-size: 18pt;
     font-weight: lighter;
     border: none;
     outline: none;
     background-color: transparent;
+    text-decoration: none; 
 }
 
-.header1 > .bl1 > button:hover,
+.header1 > .bl1 > p> a:hover,
 .header1 > .bl2 > .bl2-ico > button:hover{
     text-decoration: underline;
 }
 
+a:visited,
+a:hover,
+a:active{
+    color: inherit;
+}
 
 
 .header1 > .bl2{
