@@ -1,4 +1,3 @@
-import { Children, useState } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import ItemBoard from './components/item-board/ItemBoard';
@@ -8,45 +7,19 @@ import About from './components/about/About';
 import { AnimatePresence, motion } from 'framer-motion';
 import { SortContextProvider } from './components/item-board/SortContext';
 import ItemsSort from './components/item-board/ItemsSort';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 
 function App() {
-  const[section, setSection]=useState('О нас');
-
-  const updateSection = (newSection) =>{
-    setSection(newSection);
-    console.log(newSection);
-  }
-  
   return (
     <div className='App'>
       <Router>
         <Header/>
-        <br></br>
+        <br/>
 
 
         <div className='main'>
           <CartContextProvider>
-            <AnimatePresence mode="wait">
-
-              {/* Каталог */}
-              <RouteWrapper path="/catalog">
-                  <SortContextProvider>
-                    <ItemsSort/>
-                    <ItemBoard/>
-                  </SortContextProvider>
-              </RouteWrapper>
-
-              {/*О нас*/ }
-              <RouteWrapper path="/about">
-                <About/>
-              </RouteWrapper>
-
-              <RouteWrapper path="/cart">
-                <Cart/>
-              </RouteWrapper>
-
-            </AnimatePresence>
+            <AnimatedRoutes />
           </CartContextProvider>
         </div>
       </Router>
@@ -54,23 +27,58 @@ function App() {
   )
 }
 
-const RouteWrapper = ({path, children}) => {
+const AnimatedRoutes = () => {
+  const location = useLocation();
   return(
-    <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+      {/* Каталог */}
       <Route
-        path={path}
+        path="/catalog"
         element={
           <motion.div
-            key={path}
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            exit={{opacity:0}}>
-            {children}
+            exit={{opacity:0}}
+            transition={{ duration: 0.3 }}>
+            <SortContextProvider>
+              <ItemsSort/>
+              <ItemBoard/>
+            </SortContextProvider>
           </motion.div>
         }
       />
-    </Routes>
+            
+      <Route
+        path="/about"
+        element={
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}
+            transition={{ duration: 0.3 }}>
+            <About/>
+          </motion.div>
+        }
+      />
+
+      <Route
+        path="/cart"
+        element={
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}
+            transition={{ duration: 0.3 }}>
+            <Cart/>
+          </motion.div>
+        }
+      />
+                
+      </Routes>
+    </AnimatePresence>
   )
 }
+
 
 export default App
