@@ -1,8 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext,} from 'react'
 import ItemCard from '../item/ItemCard'
 import "./ItemBoard.css"
-import useFetch from '../customHooks/useFetch';
-import ItemsSort from './ItemsSort';
+
 import { SortContext } from './SortContext';
 
 const ItemBoard = () => {
@@ -10,7 +9,7 @@ const ItemBoard = () => {
   if(items.length === 0){
     return <p>Товары не найдены</p>
   }
-
+  
 
   return (
       <div className='ItemBoard'>
@@ -25,6 +24,7 @@ const ItemBoard = () => {
               rating={item.rating}
               price={item.price}
               reviews={Object.keys(item.reviews).length}
+              
             />
               ) 
             )

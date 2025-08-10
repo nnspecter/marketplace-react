@@ -1,0 +1,9 @@
+.item-page > .item-page-img > img{
+    max-width: 500px;
+}
+
+.item-page > .item-page-description{
+    max-width: 50vh;
+    font-size: 16pt;
+    margin-top: 10px;
+}

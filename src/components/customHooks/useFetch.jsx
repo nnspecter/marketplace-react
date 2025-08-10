@@ -1,5 +1,3 @@
-import React from 'react'
-import load_ico from "../../assets/loading.gif"
 import { useEffect, useState } from 'react';
 const useFetch = (url) => {
     const [data, setData] = useState({products: []});

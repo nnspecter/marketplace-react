@@ -1,4 +1,4 @@
-import React, { useContext, useId, useState } from 'react'
+import { useContext} from 'react'
 import { CartContext } from './CartContext'
 import "./Cart.css"
 import deleteCard from "../../assets/delete.png"

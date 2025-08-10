@@ -1,36 +1,30 @@
-import React, { useContext, useId } from 'react';
+import { useContext, useId } from 'react';
 import "./itemCard.css";
 import star from "../../assets/star.png";
-import monitor from "../../assets/monitor.jpg"
 import basket from "../../assets/basket.png"
 import { CartContext } from '../Cart/CartContext';
-import { use } from 'react';
+import { Link } from 'react-router-dom';
+import AddButton from './AddButton';
+
 
 
 const ItemCard = ({ id, image, title, rating, price, reviews}) => {
-  const key = useId();
-  const newItem={
-    key: key,
-    id: id,
-    image: image,
-    title: title,
-    rating: rating,
-    price: price,
-    count: 1,
-  }
+  
 
-  const{updateItems} = useContext(CartContext);
-
-  const handleClick = () =>{
-    updateItems(newItem)
-  }
+  const handleNavigate = (id) => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <div className='item' id={`item-${id}`}>
-        <img src={image}></img>
+        <Link to={`/product/${id}`}>
+        <div className='card-img'>
+          <img src={image}></img>
+        </div>
         <div className='item-name'>
           <h3>{title}</h3>
         </div>
+        </Link>
         <div className='item-line1'>
             <div className='star'><p>{rating}</p>
                 <img src={star}/>
@@ -39,10 +33,7 @@ const ItemCard = ({ id, image, title, rating, price, reviews}) => {
             </div>
         <div className='item-line2'>
             <h2>{price}$</h2>
-            <button onClick = {handleClick}>
-                +
-                <img src={basket}/>
-            </button>
+            <AddButton id={id}/>
             </div>
     </div>
   )
