@@ -3,12 +3,13 @@ import "./ItemsSort.css"
 import { SortContext } from './sortContext'
 
 const ItemsSort = () => {
-  const{updateCategory, updateSort} = useContext(SortContext);
+  const{category, updateCategory, sort, updateSort} = useContext(SortContext);
   return (
     <div className='sort-panel'>
         <div className='sort-left'>
           <select id="category"
             name="category"
+            value={category}
             onChange={(e)=>updateCategory(e.target.value)}
           >
             <option value="all">Все товары</option>
@@ -24,6 +25,7 @@ const ItemsSort = () => {
             <select
               id="sort" 
               name="sort"
+              value={sort}
               onChange={(e)=>updateSort(e.target.value)}
             >
             <option value="default">Актуальности</option>

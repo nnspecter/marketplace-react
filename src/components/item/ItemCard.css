@@ -68,3 +68,9 @@
 .item-line2 > button > img{
     max-width: 12px;
 }
+
+
+.item a {
+    color: inherit;
+    text-decoration: none;
+}

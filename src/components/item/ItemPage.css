@@ -1,9 +1,77 @@
-.item-page > .item-page-img > img{
+.item-page{
+    font-size: 16pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+.item-page > .box-1{
+    background-color: aliceblue;
+    max-width: 600px;
+    width: 100%;
+    padding: 2%;
+    border-radius: 25px;
+    
+}
+.item-page-rate{
+    display: flex;
+    font-size: 18pt;
+    align-items: center;
+    gap:5px
+}
+.item-page-rate > img{
+    max-width: 25px;
+}
+
+.item-page-img > img{
     max-width: 500px;
 }
 
 .item-page > .item-page-description{
-    max-width: 50vh;
-    font-size: 16pt;
     margin-top: 10px;
+}
+
+.item-page-bt{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-page-bt > button{
+    display: flex;
+    max-width: 200px;
+    align-items: center;
+    padding: 10px 15px 10px 15px;
+    outline: none;
+    border-radius: 12px;
+    background-color: rgb(105, 236, 116);
+    border: 2px solid transparent;
+    gap: 2px;
+    transition: background-color 0.5s ease;
+
+    font-size: 16pt;
+    font-weight: bold;
+
+}
+
+.item-page-bt > button:hover{
+    background-color: rgb(91, 221, 65);
+}
+
+
+.item-page-bt > button > img{
+    max-width: 40px;
+}
+
+.item-dimensions,
+.item-garanty{
+    
+    background-color: aliceblue;
+    max-width: 600px;
+    width: 100%;
+    padding: 2%;
+    border-radius: 25px;
 }

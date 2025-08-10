@@ -8,7 +8,6 @@ const AddButton = ({id}) => {
     const{items} = useContext(SortContext);
     const key = useId();
     const item = items.products.filter(el => el.id === parseInt(id));
-    console.log(item)
     const newItem={
         key: key,
         id: item[0].id,
