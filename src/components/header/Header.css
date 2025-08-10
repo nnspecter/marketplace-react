@@ -1,8 +1,14 @@
-.header1{
+nav{
     display: flex;
     position: sticky;
     z-index: 1000;
-    top: 0;
+    top: 0px;
+    width: 100%;
+}
+
+.header1{
+    width: 100%;
+    display: flex;
     background: white;
     flex-direction: row;
     justify-content: space-between;

@@ -18,9 +18,6 @@ const Header = () => {
           </div>
           <div className='bl2'>
               <div className='bl2-ico'>
-                  <button>
-                    <img src={search_ico} alt ="Логотип"/>
-                  </button>
               </div>
               <div className='bl2-ico'>
               <button >

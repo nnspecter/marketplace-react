@@ -7,15 +7,15 @@
  padding: 16px;
 }
 .about-text{
- max-width: 500px;
+ max-width: 400px;
  width: 100%;
 
 }
 
 .about-text > p{
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
-.about-img{
-
-}
+.about-img > img{
+        max-width: 400px;
+    }

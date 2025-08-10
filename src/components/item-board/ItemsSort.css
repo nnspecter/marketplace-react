@@ -1,7 +1,7 @@
 .sort-panel{
     background-color: rgb(255, 255, 255);
     display: flex;
-    max-width: 100%;
+    width: 90%;
     max-height: 30px;
     height: 100%;
     padding: 20px;
@@ -18,7 +18,7 @@
 
 .sort-panel > .sort-right > select{
     padding: 6px;
-    margin-right: 28px;
+    
 }
 
 .sort-panel > .sort-right {

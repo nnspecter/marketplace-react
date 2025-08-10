@@ -1,0 +1,217 @@
+@media (max-width: 484px) {
+  
+
+}
+
+@media (max-width: 1024px) {
+    
+    .about-text{
+    max-width: 500px;
+    width: 100%;
+
+    }
+
+    .about-text > p{
+        font-size: 15pt;
+    }
+    .about-img > img{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 750px) {
+    .about-text > p{
+        font-size: 8pt;
+    }
+    .about-text > h1{
+        font-size: 14pt;
+    }
+    .about-img > img{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 558px) {
+    .about-text > p{
+        font-size: 10pt;
+    }
+
+    .about-text > h1{
+        font-size: 14pt;
+    }
+
+    .about-img > img{
+        max-width: 0px;
+    }
+
+    .card-img > img{
+    max-width: 100px;
+    }
+
+    .item{
+    max-width: 100px;
+    width: 100%;
+    padding: 1.5%;
+    }
+
+    .item-name{
+    max-height: 45px;
+    height: 100%;
+    font-size: 8pt;
+    }
+
+    .item-line1{
+    font-size: 10pt;
+    }
+
+    .item-line1 > .star > img{
+    max-width: 10px;
+    }
+
+    .item-line2{
+        font-size: 8pt;
+        flex-direction: column;
+    }
+    
+    .header1 > .bl1 > p > a,
+    .header1 > .bl2 > .bl2-ico > button{
+        font-size: 14pt;
+   
+    }
+    .header1 > .bl2 > .bl2-ico > button img{
+        max-width: 22px;
+    }
+    .header1 > .bl1 > img{
+        max-width: 30px;
+    }
+    .header1 > .bl2 img{
+        max-width: 28px;
+    }
+    .sort-right > p{
+        font-size: 0;
+    }
+    .cart-item > .imgName > img{
+    max-width: 100px;
+    width: 100%;
+    }
+    .imgName > h2{
+        font-size: 14pt;
+    }
+    .item-price{
+        font-size: 10pt;
+    }
+    .cart-item > .imgName > .operate > button > img{
+        max-width: 30px;
+    }
+    .cart-item > .imgName > .operate > button > img:hover{
+    max-width: 32px;
+    }
+    .cart-item > .imgName > .operate > .cart-count > button{
+        font-size: 12pt;
+    }
+    .cart-count > h1{
+        font-size: 18pt;
+    }
+}
+
+@media (max-width: 375px) {
+    .about-text > p{
+        font-size: 10pt;
+    }
+
+    .about-text > h1{
+        font-size: 14pt;
+    }
+
+    .about-img > img{
+        max-width: 0px;
+    }
+
+    .card-img > img{
+    max-width: 100px;
+    }
+
+    .item{
+    max-width: 100px;
+    width: 100%;
+    padding: 1.5%;
+    }
+
+    .item-name{
+    max-height: 45px;
+    height: 100%;
+    font-size: 8pt;
+    }
+
+    .item-line1{
+    font-size: 10pt;
+    }
+
+    .item-line1 > .star > img{
+    max-width: 10px;
+    }
+
+    .item-line2{
+        font-size: 8pt;
+        flex-direction: column;
+    }
+    
+    .header1 > .bl1 > p > a,
+    .header1 > .bl2 > .bl2-ico > button{
+        font-size: 12pt;
+   
+    }
+    .header1 > .bl2 > .bl2-ico > button img{
+        max-width: 20px;
+    }
+    .header1 > .bl1 > img{
+        max-width: 25px;
+    }
+    .header1 > .bl2 img{
+        max-width: 25px;
+    }
+    .sort-right > p{
+        font-size: 0;
+    }
+    .cart-item > .imgName > img{
+    max-width: 80px;
+    width: 100%;
+    }
+    .imgName > h2{
+        font-size: 10pt;
+    }
+    .item-price{
+        font-size: 8pt;
+    }
+    .cart-item > .imgName > .operate > button > img{
+        max-width: 27px;
+    }
+    .cart-item > .imgName > .operate > button > img:hover{
+    max-width: 30px;
+    }
+    .cart-item > .imgName > .operate > .cart-count > button{
+        font-size: 12pt;
+    }
+    .cart-count > h1{
+        font-size: 15pt;
+    }
+    .sort-left select,
+    .sort-right select {
+        font-size: 10pt !important;
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 310px) {
+    .sort-left select,
+    .sort-right select {
+        font-size: 10pt !important;
+        max-width: 90px;
+    }
+    .header1 > .bl1 > p > a,
+    .header1 > .bl2 > .bl2-ico > button{
+        font-size: 10pt;
+   
+    }
+
+}

@@ -9,7 +9,7 @@ import { SortContextProvider } from './components/item-board/SortContext';
 import ItemsSort from './components/item-board/ItemsSort';
 import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 import ItemPage from './components/item/ItemPage';
-
+import './components/mediaCss/AppMedia.css'
 function App() {
   return (
     <div className='App'>
